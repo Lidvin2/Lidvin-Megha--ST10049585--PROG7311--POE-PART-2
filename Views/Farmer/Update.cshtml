@@ -1,0 +1,42 @@
+﻿@model Farmer
+
+<h2 class="text-center mb-4" style="color: green;">Edit Farmer</h2>
+
+<form asp-action="Approve" class="mx-auto p-4 shadow rounded" style="max-width: 600px; background-color: #F5DEB3; border: 2px solid #8B4513;">
+
+   
+
+    <div class="form-group mb-4">
+        <input type="hidden" asp-for="FarmerName" />
+        <label for="FarmerName" class="form-label fw-bold" style="color: #D2691E;">Farmer Name</label>
+        <input asp-for="FarmerName" class="form-control" style="background-color: #FFF8DC; border: 1px solid #8B4513; color: #8B4513;" />
+        <span asp-validation-for="FarmerName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-4">
+        <input type="hidden" asp-for="Email" />
+        <label for="Email" class="form-label fw-bold" style="color: #D2691E;">Email</label>
+        <input asp-for="Email" class="form-control" style="background-color: #FFF8DC; border: 1px solid #8B4513; color: #8B4513;" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-4">
+        <input type="hidden" asp-for="Number" />
+        <label for="Number" class="form-label fw-bold" style="color: #D2691E;">Number</label>
+        <input asp-for="Number" class="form-control" style="background-color: #FFF8DC; border: 1px solid #8B4513; color: #8B4513;" />
+        <span asp-validation-for="Number" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-4">
+        <input type="hidden" asp-for="Location" />
+        <label for="Location" class="form-label fw-bold" style="color: #D2691E;">Location</label>
+        <input asp-for="Location" class="form-control" style="background-color: #FFF8DC; border: 1px solid #8B4513; color: #8B4513;" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+
+    <div class="d-flex justify-content-between">
+        <button type="submit" class="btn" style="background-color: #CD853F; color: white; border: 1px solid #8B4513;">Save</button>
+        <a asp-action="Index" class="btn" style="background-color: #8B4513; color: white; border: 1px solid #8B4513;">Back to List</a>
+    </div>
+</form>

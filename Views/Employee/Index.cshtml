@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Employee>
+
+<h2 class="text-center mb-4" style="color: yellow;">Employee List</h2>
+
+<table class="table table-responsive table-hover table-bordered" style="background-color: #F5DEB3; border: 2px solid #8B4513;">
+    <thead style="background-color: #D2B48C;">
+        <tr>
+            <th style="color: #8B4513;">Name</th>
+            <th style="color: #8B4513;">Product</th>
+            <th style="color: #8B4513;">Date</th>
+            <th style="color: #8B4513;">Price</th>
+            <th style="color: #8B4513;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td style="background-color: #FFF8DC; color: #8B4513;">@employee.Name</td>
+                <td style="background-color: #FFF8DC; color: #8B4513;">@employee.Product</td>
+                <td style="background-color: #FFF8DC; color: #8B4513;">@employee.Date.ToShortDateString()</td>
+                <td style="background-color: #FFF8DC; color: #8B4513;">@employee.Price</td>
+                <td>
+                    <a href="/Employee/Edit/@employee.EmployeeID" class="btn" style="background-color: green; color: white; border: 1px solid #8B4513;">Edit</a>
+                    <a href="/Employee/Delete/@employee.EmployeeID" class="btn" style="background-color: red; color: white; border: 1px solid #8B4513;">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Employee/Create" class="btn btn-primary">Add Employee</a>
