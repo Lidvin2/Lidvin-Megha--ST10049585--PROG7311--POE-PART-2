@@ -2,7 +2,7 @@
 
 1. Database Development and Integration
 📦 Tool: SQL Server / LocalDB
-You will create three tables:
+I will create two tables:
 
 🔹 Farmers
 [Key]
